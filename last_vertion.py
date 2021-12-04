@@ -12,7 +12,7 @@ from tensorflow.keras.layers import Dense, Dropout, LSTM
 mas = ["YNDX", "MSFT", "SHOP", "SNDL", "FB"]
 company = mas[0]
 
-STEP = 30
+STEP = 1
 
 start = dt.datetime(2001, 1, 1)
 end = dt.datetime.now()
