@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/logo.png' %}">
+    <title>Forecast shares</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-title"><a href="" class="menu-link">FShares</a></div>
+        <div class="nav-menu">
+            <div class="menu-title"><a href = '' class='menu-title-link'>Топ</a></div>
+            <div class="menu-title"><a href = '' class='menu-title-link'>Соглашение</a></div>
+            <div class="menu-title"><a href = '' class='menu-title-link'>Поддержка</a></div>
+        </div>
+        <div class="login">
+            <div><a href='' class="loginf">Войти</a></div>
+            <div><a href='' class="regf">Регистрация</a></div>
+        </div>
+    </header>
+    <main>
+        <div class="table">
+            <div class="table-namtag">Топ-5 акций фондового рынка</div>
+            <div class="table-menu">
+                <a class="table-menu-str-link" href="{% url 'stock1' %}">
+                    <div class="table-menu-str">
+                        <div class="table-menu-str-pos">1</div>
+                        <div class="table-menu-str-namtag">Yandex</div>
+                        <div class="table-menu-str-shorttag">yndx</div>
+                    </div>
+                </a>
+                <a class="table-menu-str-link" href="{% url 'stock2' %}">
+                    <div class="table-menu-str">
+                        <div class="table-menu-str-pos">2</div>
+                        <div class="table-menu-str-namtag">Microsoft</div>
+                        <div class="table-menu-str-shorttag">MSFT</div>
+                    </div>
+                </a>
+                <a class="table-menu-str-link" href="{% url 'stock3' %}">
+                    <div class="table-menu-str">
+                        <div class="table-menu-str-pos">3</div>
+                        <div class="table-menu-str-namtag">Facebook</div>
+                        <div class="table-menu-str-shorttag">fb</div>
+                    </div>
+                </a>
+                <a class="table-menu-str-link" href="{% url 'stock4' %}">
+                    <div class="table-menu-str">
+                        <div class="table-menu-str-pos">4</div>
+                        <div class="table-menu-str-namtag">netflix</div>
+                        <div class="table-menu-str-shorttag">nflx</div>
+                    </div>
+                </a>
+                <a class="table-menu-str-link" href="{% url 'stock5' %}">
+                    <div class="table-menu-str">
+                        <div class="table-menu-str-pos">5</div>
+                        <div class="table-menu-str-namtag">Amazon</div>
+                        <div class="table-menu-str-shorttag">AMZN</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

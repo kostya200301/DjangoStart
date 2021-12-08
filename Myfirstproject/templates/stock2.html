@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/logo.png' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Forecast shares</title>
+</head>
+<body>
+    <img src="{% static 'img/stockload.gif' %}" id="submgif" alt="none" style="display: none; width: 100%; height: 100%;">
+    <header class="header">
+        <div class="header-title"><a href="/" class="menu-link">FShares</a></div>
+        <div class="nav-menu">
+            <div class="menu-title"><a href = '/' class='menu-title-link'>Топ</a></div>
+            <div class="menu-title"><a href = '' class='menu-title-link'>Соглашение</a></div>
+            <div class="menu-title"><a href = '' class='menu-title-link'>Поддержка</a></div>
+        </div>
+        <div class="login">
+            <div><a href='' class="loginf">Войти</a></div>
+            <div><a href='' class="regf">Регистрация</a></div>
+        </div>
+    </header>
+    <main>
+        <form action="{% url 'Preds' %}" id="subm">
+        <div class="share-form">
+            <h1 class="share-title">Microsoft</h1>
+            <input data-bn-type="input" style="display: none;" name="company_name" value = 'MSFT' readonly>
+            <input data-bn-type="input" style="display: none;" name="stockfull" value = 'Microsoft' readonly>
+                <div class="share-input-sections">
+                    <div class="share-input-dates">
+                        <div class="share-input-sect">
+                            <div class="share-input-title">Дата начала</div>
+                            <input data-bn-type="input" name="start" type="date" class="share-input-inp" value="2015-08-03">
+                        </div>
+                        <div class="share-input-sect">
+                            <div class="share-input-title">Конечная дата</div>
+                            <input data-bn-type="input" name="end" class="share-input-inp" type="date" value={{curr_date}} max={{curr_date}} readonly>
+                        </div>
+                    </div>
+                        <div class="share-input-sect">
+                            <div class="share-input-title">Момент времени, до которого просчитывать</div>
+                            <input data-bn-type="input" name="predz" class="share-input-inp" type="date" value={{curr_date}} min={{curr_date}}>
+                        </div>
+                </div>
+                <div class="share-submit-button"><input type="submit" value="Отправить" class="share-submit"></div>
+        </div>
+        </form>
+    </main>
+    <script>
+        $('#subm').submit(function() {
+            $('#submgif').show();
+        });
+    </script>
+</body>
+</html>

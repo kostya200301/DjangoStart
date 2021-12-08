@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/logo.png' %}">
+    <title>Forecast shares</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-title"><a href="/" class="menu-link">FShares</a></div>
+        <div class="nav-menu">
+            <div class="menu-title"><a href = '/' class='menu-title-link'>Топ</a></div>
+            <div class="menu-title"><a href = '' class='menu-title-link'>Соглашение</a></div>
+            <div class="menu-title"><a href = '' class='menu-title-link'>Поддержка</a></div>
+        </div>
+        <div class="login">
+            <div><a href='' class="loginf">Войти</a></div>
+            <div><a href='' class="regf">Регистрация</a></div>
+        </div>
+    </header>
+    <main>
+        <div class="answer">
+            <div class="answer-namtag">Ответ на ваш запрос по акции {{stockname}}</div>
+            <div class="answer-window">
+                <div class="answer-window-text">Цена 1 акции компании {{stockname}} на {{predz}} составит</div>
+                <div class="answer-window-price">{{finalpred}}</div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
